@@ -1,9 +1,11 @@
 import SingleColor from "./SingleColor";
-const AllColors = () => {
+import { nanoid } from "nanoid";
+const AllColors = ({ colors }) => {
   return (
     <section>
-      <h5>All Colors</h5>
-      <SingleColor />
+      {colors.map((color, index) => {
+        return <SingleColor key={nanoid()} color={color} index={index} />;
+      })}
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const InputColor = () => {
-  const [color, setColor] = useState("#08B2E3");
+  const [color, setColor] = useState("#315c72");
   const handleSubmit = (e) => {};
   return (
     <section>
@@ -16,7 +16,7 @@ const InputColor = () => {
           type="text"
           value={color}
           onChange={(e) => setColor(e.target.value)}
-          placeholder="#08B2E3"
+          placeholder="#315c72"
         />
         <button type="submit" style={{ background: color }}>
           Submit
