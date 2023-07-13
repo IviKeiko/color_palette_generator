@@ -1,1 +1,118 @@
+html {
+  --petroleo-1: #e7efef;
+  --petroleo-2: #9fbebe;
+  --petroleo-3: #568e8e;
+  --petroleo-4: #0e5d5d;
+  --petroleo-5: #0a4141;
+  --petroleo-6: #062525;
+  --petroleo-7: #031313;
 
+  --white: #fff;
+
+  --backgroundColor: #f5f8f8;
+  --textColor: var(--petroleo-7);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  background-color: var(--backgroundColor);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--textColor);
+  letter-spacing: var(--letterSpacing);
+}
+
+.container-heading {
+  padding: 2rem;
+  display: grid;
+  row-gap: 1rem;
+  height: 160px;
+}
+
+.color-form {
+  display: flex;
+  width: 100%;
+}
+
+input[type="text"] {
+  border-color: transparent;
+  max-width: 10rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+input[type="color"] {
+  padding: 0;
+  height: 100%;
+  background-color: var(--white);
+  border-color: transparent;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-top-left-radius: var(--borderRadius);
+  border-bottom-left-radius: var(--borderRadius);
+  border-color: transparent;
+}
+button {
+  width: 6rem;
+  border: transparent;
+  border-bottom-right-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+button:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .container-heading {
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+  }
+  .color-form {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  input[type="text"] {
+    max-width: 6rem;
+  }
+  .container-heading {
+    margin: 0 auto;
+  }
+}
+
+.colors-container {
+  min-height: calc(100vh - 160px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+}
+
+.singleColor {
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+.color-light .percent-value {
+  color: var(--petroleo-2);
+}
+.color-light .hex-value {
+  color: var(--petroleo-2);
+}

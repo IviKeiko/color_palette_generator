@@ -15,9 +15,13 @@ const SingleColor = ({ color, index }) => {
     }
   };
   return (
-    <article style={{ background: `#${hex}` }} onClick={saveToClipboard}>
-      <p>{weight}%</p>
-      <p>#{hex}</p>
+    <article
+      className={index > 10 ? "singleColor color-light" : "singleColor"}
+      style={{ background: `#${hex}` }}
+      onClick={saveToClipboard}
+    >
+      <p className="percent-value">{weight}%</p>
+      <p className="hex-value">#{hex}</p>
     </article>
   );
 };

@@ -7,9 +7,9 @@ const InputColor = ({ addColor }) => {
     addColor(color);
   };
   return (
-    <section>
-      <h3>Color Palette Generator</h3>
-      <form onSubmit={handleSubmit}>
+    <section className="container-heading">
+      <h2>Color Palette Generator</h2>
+      <form className="color-form" onSubmit={handleSubmit}>
         <input
           type="color"
           value={color}
