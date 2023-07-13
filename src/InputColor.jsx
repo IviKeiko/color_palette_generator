@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-const InputColor = () => {
-  const [color, setColor] = useState("#315c72");
-  const handleSubmit = (e) => {};
+const InputColor = ({ addColor }) => {
+  const [color, setColor] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addColor(color);
+  };
   return (
     <section>
       <h3>Color Palette Generator</h3>

@@ -1,5 +1,6 @@
 import SingleColor from "./SingleColor";
 import { nanoid } from "nanoid";
+
 const AllColors = ({ colors }) => {
   return (
     <section>
